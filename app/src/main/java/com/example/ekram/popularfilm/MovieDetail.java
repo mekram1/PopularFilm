@@ -1,7 +1,5 @@
 package com.example.ekram.popularfilm;
 
-import android.graphics.Movie;
-
 import java.io.Serializable;
 
 
@@ -10,6 +8,7 @@ import java.io.Serializable;
  */
 
 public class MovieDetail implements Serializable {
+
     private String mTitle;
     private String mOverview;
     private String mRating;
@@ -22,6 +21,10 @@ public class MovieDetail implements Serializable {
         mRating = Rating;
         mReleaseDate = ReleaseDate;
         mImagePath = Image_Path;
+    }
+
+    public MovieDetail() {
+
     }
 
     public String getmTitle() {
@@ -43,4 +46,6 @@ public class MovieDetail implements Serializable {
     public String getmImagePath() {
         return "http://image.tmdb.org/t/p/"+"w185"+mImagePath;
     }
+
+
 }

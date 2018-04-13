@@ -44,10 +44,12 @@ public class MainActivity extends AppCompatActivity {
                 sort_bypop=true;
                 new FetchMovies().execute(sort_bypop);
                 break;
-                case R.id.action_sort_rating:
+            case R.id.action_sort_rating:
                 if (sort_bypop==false) break;
                 sort_bypop=false;
                 new FetchMovies().execute(sort_bypop);
+
+
         }
         return true;
     }

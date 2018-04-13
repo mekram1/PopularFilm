@@ -1,6 +1,5 @@
 package com.example.ekram.popularfilm;
 
-import android.graphics.Movie;
 import android.net.Uri;
 
 import org.json.JSONArray;
@@ -21,15 +20,17 @@ import java.util.ArrayList;
  */
 
 public class movie_url {
-    private static final String BASE_URL = "https://api.themoviedb.org/3/discover/movie?";
+    public static final String BASE_URL = "http://api.themoviedb.org/3/";
+ //   private static final String BASE_URL = "https://api.themoviedb.org/3/movie/";
     //api key here
-    private static final String API = "";
+    private static final String API = "ca6cdc1ab01f8b1f33c1532a9ade06e1";
     private static final String API_KEY = "api_key";
     private static final String SORT_BY = "sort_by";
-    private static final String POPULARITY = "popularity.desc";
-    private static final String VOTE = "vote_average.desc";
+    private static final String POPULARITY = "movie/popular";
+    private static final String VOTE = "movie/top_rated";
     private static final String PAGE = "page";
     private static final String NUMBER = "1";
+
 
     String JSONresponse;
 
@@ -44,10 +45,21 @@ public class movie_url {
         else sorting_order = VOTE;
 
         Uri uri =  Uri.parse(BASE_URL).buildUpon()
+
+
+                .appendEncodedPath(sorting_order)
                 .appendQueryParameter(API_KEY, API)
-                .appendQueryParameter(SORT_BY, sorting_order)
                 .appendQueryParameter(PAGE, NUMBER)
                 .build();
+
+
+
+    /**
+     * Builds the URL used to query the top rated movies.
+     * @return The URL to use to query the top rated movies.
+     */
+
+
 
         URL url = new URL(uri.toString());
 
@@ -83,9 +95,11 @@ public class movie_url {
                 String Rating = object1.getString("vote_average");
                 String Date = object1.getString("release_date");
                 String Image_Path = object1.getString("poster_path");
-                movies.add(new MovieDetail(Title, Overview, Rating, Date, Image_Path));
+                movies.add(new MovieDetail());
             }
         }
         return movies;
     }
 }
+
+
