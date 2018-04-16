@@ -26,7 +26,7 @@ public class movie_url {
     public static final String BASE_URL = "http://api.themoviedb.org/3/";
  //   private static final String BASE_URL = "https://api.themoviedb.org/3/movie/";
     //api key here
-    private static final String API = "ca6cdc1ab01f8b1f33c1532a9ade06e1";
+    private static final String API = "";
     private static final String API_KEY = "api_key";
     private static final String SORT_BY = "sort_by";
     private static final String POPULARITY = "movie/popular";
