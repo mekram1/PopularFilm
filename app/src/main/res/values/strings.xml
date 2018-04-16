@@ -3,4 +3,5 @@
     <string name="settings">Settings</string>
     <string name="movie_rating">Movie Rating: </string>
     <string name="releasdate_info">Released Date: </string>
+    <string name="trailers">Trailer</string>
 </resources>
