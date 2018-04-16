@@ -98,6 +98,8 @@ public class movie_url {
                 String movieId = object1.getString("id");
                 movies.add(new MovieDetail());
             }
+
+
         }
         return movies;
     }

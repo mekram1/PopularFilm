@@ -49,6 +49,7 @@ public class DetailActivity extends AppCompatActivity {
     private LinearLayoutManager trailerLayoutManager;
     private LinearLayoutManager reviewLayoutManager;
 
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate( savedInstanceState );
@@ -71,8 +72,6 @@ public class DetailActivity extends AppCompatActivity {
         Title.setText( CurrentMovie.getmTitle() );
         Overview.setText( CurrentMovie.getmOverview() );
 
-        movieId = MovieDetail.getMovieId();
-        Log.v("movieId", movieId);
 
         Picasso.with( context ).load( CurrentMovie.getmImagePath() ).into( Poster );
 

@@ -41,7 +41,7 @@ public class MovieDetail implements Serializable {
     public String getmReleaseDate() {
         return mReleaseDate;
     }
-    public static String getMovieId(){ return mMovieId; }
+    public String getmMovieId(){ return mMovieId; }
 
     public String getmImagePath() {
         return "http://image.tmdb.org/t/p/"+"w185"+mImagePath;

@@ -26,7 +26,6 @@ public class FavoriteContract {
     static public final class FavoriteEntry implements BaseColumns {
         public static final String TABLE_NAME = "favorites";
         public static final String COLUMN_MOVIE_ID = "movieID";
-        public static final Uri CONTENT_URI =
-                BASE_URI.buildUpon().appendPath( PATH_FAVORITES ).build();
+        public static final Uri CONTENT_URI = BASE_URI.buildUpon().appendPath( PATH_FAVORITES ).build();
     }
 }
